@@ -9,5 +9,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'ld1-angular-18-r1';
+  title = 'The ld1-angular-18-r1 App';
 }
