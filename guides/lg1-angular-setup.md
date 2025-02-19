@@ -1,4 +1,5 @@
-```sh
+``` sh
+
 node --version
 npm --version
 
@@ -8,7 +9,8 @@ npm uninstall -g @angular/cli
 npm uninstall @angular/cli
 //clean the cache
 npm cache clean
-//install angular client
+//install angular client  
 npm install -g @angular/cli@8.0.1
 npm install -g @angular/cli@latest
+
 ```
