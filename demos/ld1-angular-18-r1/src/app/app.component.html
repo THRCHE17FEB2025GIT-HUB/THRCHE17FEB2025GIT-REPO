@@ -1,10 +1,7 @@
-<h1 style="color:maroon">{{title}}</h1>
-
------
-<h2>
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas voluptatibus perferendis tempore culpa, aspernatur nesciunt aut accusamus similique maiores harum accusantium totam cum quaerat eligendi cumque adipisci repudiandae voluptatum!
-</h2>
-
-<h1>
-  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum laudantium eligendi quaerat, odit consequuntur illo quasi hic a provident dignissimos ipsa expedita recusandae nihil iusto repellat, asperiores tempore saepe quo?
-</h1>
+<h1>Our app is running successfully!</h1>
+{{employees}}
+<ol *ngFor="let employee of employees">
+<li>{{employee.id}}</li>
+<li>{{employee.name}}</li>
+<li>{{employee.salary}}</li>
+</ol>
