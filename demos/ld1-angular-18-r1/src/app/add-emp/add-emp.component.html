@@ -1,7 +1,7 @@
 
 <!-- (ngSubmit) = event binding -->
  <!-- [formGroup] = property binding -->
-<form   [formGroup] = "addForm">
+<form   [formGroup] = "addForm" (ngSubmit) = 'saveEmployee()'>
 <input type="text" id="id" formControlName="id">
 <input type="text" id="name" formControlName="name">
 <input type="text" id="salary" formControlName="salary">

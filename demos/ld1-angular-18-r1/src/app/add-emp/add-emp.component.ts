@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
-import { ReactiveFormsModule, FormBuilder, FormGroup} from "@angular/forms";
+import { ReactiveFormsModule, FormBuilder, FormGroup } from "@angular/forms";
+import { EmployeeService } from "../service/employee.service";
 
 @Component({
     selector: 'app-add-emp',
@@ -11,12 +12,18 @@ import { ReactiveFormsModule, FormBuilder, FormGroup} from "@angular/forms";
 
 export class AddEmpComponent {
     // The addForm property is a FormGroup object.
-   addForm : FormGroup;
-    constructor(private formBuilder: FormBuilder) {
+    addForm: FormGroup;
+    constructor(private formBuilder: FormBuilder,
+        private employeeService: EmployeeService) {
         this.addForm = this.formBuilder.group({
-            id: [],
-            name: [],
-            salary: []
+            id: [100],
+            name: ["Rambo"],
+            salary: [500]
         });
+    }
+
+    saveEmployee() {
+        console.log("posting details to server through employee service");
+        console.log(this.addForm.value);
     }
 }
