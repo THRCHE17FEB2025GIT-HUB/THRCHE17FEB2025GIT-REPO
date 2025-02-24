@@ -47,5 +47,5 @@ export class AppComponent  implements OnInit{
     console.log("asynchronously fetching data from endpoint!")
     this.employeeService.getEmployees().subscribe(datafromExeternalService => this.employeesList = datafromExeternalService);
     console.log(this.employeesList)
-  }
+  } 
 }

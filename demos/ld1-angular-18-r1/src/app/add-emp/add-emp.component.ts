@@ -18,12 +18,17 @@ export class AddEmpComponent {
         this.addForm = this.formBuilder.group({
             id: [100],
             name: ["Rambo"],
-            salary: [500]
+            salary: [500],
+            employeeRole: []
         });
     }
 
     saveEmployee() {
         console.log("posting details to server through employee service");
         console.log(this.addForm.value);
+        this.employeeService.createEmployee(this.addForm.value)
+            .subscribe(data => {
+                console.log('data saved ' + data);
+            });
     }
 }

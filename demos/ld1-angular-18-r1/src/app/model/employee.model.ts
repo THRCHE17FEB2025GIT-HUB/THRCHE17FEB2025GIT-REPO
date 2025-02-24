@@ -3,6 +3,7 @@ export class Employee {
     id?: number;
     name?: string;
     salary? : number;
+    emp
 
     // constructor (id: number, name: string, salary: number) {
     //     this.id = id;
