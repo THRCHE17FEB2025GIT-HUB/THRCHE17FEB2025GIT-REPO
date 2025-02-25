@@ -7,7 +7,7 @@ import { Injectable } from "@angular/core";
     providedIn: 'root',
 })
 export class EmployeeService {
-    baseUrl : string = 'http://localhost:3001/employees';
+    baseUrl : string = 'http://localhost:3000/employees';
     // httpClient? : HttpClient;
     // constructor(httpClient : HttpClient){
     //     this.httpClient = httpClient;
