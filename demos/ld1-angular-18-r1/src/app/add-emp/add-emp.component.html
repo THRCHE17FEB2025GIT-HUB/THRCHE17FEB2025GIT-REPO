@@ -1,11 +1,25 @@
-
+<!-- Style the form! -->
 <!-- (ngSubmit) = event binding -->
- <!-- [formGroup] = property binding -->
-<form   [formGroup] = "addForm" (ngSubmit) = 'saveEmployee()'>
-<input type="text" id="id" formControlName="id">
-<input type="text" id="name" formControlName="name">
-<input type="text" id="salary" formControlName="salary">
-<input type="text" id="role" formControlName="employeeRole">
-<!-- <input type="text" id="domain" value = "Health Care"> -->
-<button class="btn btn-success" type="submit">Save</button>
-</form> 
+<!-- [formGroup] = property binding -->
+<div class="container">
+    <div class="form-group">
+        <form [formGroup]="addForm" (ngSubmit)='saveEmployee()'>
+            <label for="id">Employee Id</label>
+            <input type="text" id="id" formControlName="id" class="form-control"
+            style="width:250px"> <br>
+            <label for="id">Employee Name</label>
+            <input type="text" id="name" formControlName="name" class="form-control"
+            style="width:250px"> <br>
+            <label for="id">Employee Salary </label>
+            <input type="text" id="salary" formControlName="salary" class="form-control"
+            style="width:250px"> <br>
+            <label for="id">Employee Role</label>
+            <input type="text" id="role" formControlName="employeeRole" class="form-control"
+            style="width:250px"> <br>
+            <!-- <input type="text" id="domain" value = "Health Care"> -->
+        
+            <button class="btn btn-success" type="submit">Save</button> &nbsp; &nbsp; &nbsp; &nbsp;
+            <button class="btn btn-warning" type="submit">Cancel</button>
+        </form>
+    </div>
+</div>

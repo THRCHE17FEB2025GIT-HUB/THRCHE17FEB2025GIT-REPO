@@ -1,8 +1,34 @@
-
 <!-- {{employees}} -->
-<ol *ngFor="let employee of employeesList">
-<li>{{employee.id}}</li>
-<li>{{employee.name}}</li>
-<li>{{employee.salary}}</li>
+<!-- <ol *ngFor="let employee of employeesList">
+    <li>{{employee.id}}</li>
+    <li>{{employee.name}}</li>
+    <li>{{employee.salary}}</li> -->
 <!-- <li>{{employee.employeeRole}}</li> -->
-</ol>
+<!-- </ol> -->
+
+<div class="container">
+    <br>
+    <h5>Employee Detials</h5> <br>
+    <div>
+        <div  style="width:500px">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Employee Id </th>
+                        <th>Employee Name </th>
+                        <th>Employee Salary</th>
+                        <!-- <th>Employee </th> -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employeesList">
+                        <td>{{employee.id}}</td>
+                        <td>{{employee.name}}</td>
+                        <td>{{employee.salary}}</td>
+                        <!-- <td>{{employee.employeeRole}}</td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

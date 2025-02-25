@@ -19,7 +19,6 @@ export class AddEmpComponent {
             id: [100],
             name: ["Rambo"],
             salary: [500],
-            employeeRole: []
         });
     }
 
