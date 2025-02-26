@@ -9,6 +9,7 @@ import { RegisterComponent } from "./register/register.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { EmployeeService } from "./service/employee.service";
 
+
 @NgModule({
     imports: [BrowserModule,
         // HttpClientModule,
@@ -16,7 +17,7 @@ import { EmployeeService } from "./service/employee.service";
         // FormsModule,
         AppRoutingModule,
     ],
-    declarations: [AppComponent, LoginComponent, ListEmpComponent, UpdateEmpComponent, RegisterComponent],
+    declarations: [AppComponent, LoginComponent, ListEmpComponent, UpdateEmpComponent, RegisterComponent,],
     bootstrap: [AppComponent],
     providers: [EmployeeService]
 })
