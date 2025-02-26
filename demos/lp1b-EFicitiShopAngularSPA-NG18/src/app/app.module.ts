@@ -11,13 +11,13 @@ import { EmployeeService } from "./service/employee.service";
 
 
 @NgModule({
+    declarations: [ AppComponent, LoginComponent, ListEmpComponent, UpdateEmpComponent, RegisterComponent,],
     imports: [BrowserModule,
         // HttpClientModule,
         // ReactiveFormsModule,
         // FormsModule,
         AppRoutingModule,
     ],
-    declarations: [AppComponent, LoginComponent, ListEmpComponent, UpdateEmpComponent, RegisterComponent,],
     bootstrap: [AppComponent],
     providers: [EmployeeService]
 })
