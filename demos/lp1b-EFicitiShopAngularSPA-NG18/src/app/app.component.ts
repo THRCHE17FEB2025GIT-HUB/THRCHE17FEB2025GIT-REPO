@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,4 +10,16 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'lp1b-EFicitiShopAngularSPA-NG18';
+
+  constructor(private router : Router) {
+  }
+
+  isLoggedIn() : boolean {
+    return window.sessionStorage.getItem('loggedIn') === 'yes';
+  }
+
+  logout() {
+    sessionStorage.removeItem('loggedIn');
+    this.router.navigate(['/login']);
+  }
 }

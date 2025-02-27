@@ -8,12 +8,12 @@
     },
     {
       "id": "2",
-      "name": "Jane Doe",
-      "salary": 600,
+      "name": "LEARNER",
+      "salary": "500000000",
       "employeeRole": "Developer"
     },
     {
-      "id": 100,
+      "id": "100",
       "name": "Rambo",
       "salary": 500,
       "employeeRole": null
