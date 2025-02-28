@@ -8,13 +8,14 @@ import { UpdateEmpComponent } from "./update-emp/update-emp.component";
 import { RegisterComponent } from "./register/register.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { EmployeeService } from "./service/employee.service";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 
 @NgModule({
     declarations: [ AppComponent, LoginComponent, ListEmpComponent, UpdateEmpComponent, RegisterComponent,],
     imports: [BrowserModule,
         // HttpClientModule,
-        // ReactiveFormsModule,
+        ReactiveFormsModule,
         // FormsModule,
         AppRoutingModule,
     ],

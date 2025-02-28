@@ -2,6 +2,10 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 
+interface LoginForm {
+  loginid: string;
+  password: string;
+}
 @Component({
   selector: 'app-login',
   //  standalone: true,
@@ -10,8 +14,10 @@ import { Router } from "@angular/router";
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+
   loginForm!: FormGroup;
   submitted = false;
+
   // Constructor vs ngOnInit comparison:
   // Constructor:
   // - Initializes class members
@@ -50,13 +56,18 @@ export class LoginComponent {
       return;
     }
 
-    const formData = this.loginForm.value;
+
+
+    const formData:LoginForm = this.loginForm.value;
 
     if (formData.loginid === "angular" && formData.password === "ngpass") {
       console.log("Login successful");
       sessionStorage.setItem("loggedIn", "yes");
       this.router.navigate(["/employees"]);
     }
-
+    else {
+      console.log("Login failed");
+      sessionStorage.removeItem("loggedIn");
+    }
   }
 }
