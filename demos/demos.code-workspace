@@ -1,15 +1,19 @@
 {
 	"folders": [
 		{
+			"name": "ld1-angular-18-r1",
 			"path": "ld1-angular-18-r1"
 		},
 		{
+			"name": "json-server-backend",
 			"path": "json-server-backend"
 		},
 		{
+			"name": "lp1a-EFictiShopAngularSPA-NG18",
 			"path": "../../pre-demo/lp1a-EFictiShopAngularSPA-NG18"
 		},
 		{
+			"name": "lp1b-EFicitiShopAngularSPA-NG18",
 			"path": "lp1b-EFicitiShopAngularSPA-NG18"
 		}
 	],

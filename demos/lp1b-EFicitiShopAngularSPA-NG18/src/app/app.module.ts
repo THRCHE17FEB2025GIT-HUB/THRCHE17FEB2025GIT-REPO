@@ -9,15 +9,17 @@ import { RegisterComponent } from "./register/register.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { EmployeeService } from "./service/employee.service";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { UseStandaloneComponentInModuleComponent } from "./use-standalone-component-in-module/use-standalone-component-in-module.component";
 
 
 @NgModule({
     declarations: [ AppComponent, LoginComponent, ListEmpComponent, UpdateEmpComponent, RegisterComponent,],
     imports: [BrowserModule,
-        // HttpClientModule,
+        HttpClientModule,
         ReactiveFormsModule,
         // FormsModule,
         AppRoutingModule,
+        // UseStandaloneComponentInModuleComponent
     ],
     bootstrap: [AppComponent],
     providers: [EmployeeService]
