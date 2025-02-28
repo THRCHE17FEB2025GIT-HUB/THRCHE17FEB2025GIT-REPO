@@ -7,13 +7,14 @@ import { UpdateEmpComponent } from './update-emp/update-emp.component';
 import { RegisterComponent } from './register/register.component';
 import { AppComponent } from './app.component';
 import { UseStandaloneComponentInModuleComponent } from './use-standalone-component-in-module/use-standalone-component-in-module.component';
+import { AuthGuardService } from './service/auth-guard.service';
 // import routes from './app.routes';
 
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path: 'employees', component: ListEmpComponent},
-  {path: 'update/:id', component: UpdateEmpComponent},
+  {path: 'employees', component: ListEmpComponent, canActivate: [AuthGuardService]},
+  {path: 'update/:id', component: UpdateEmpComponent, canActivate: [AuthGuardService]},
   {path: 'register', component: RegisterComponent},
   {path: '**', component:LoginComponent}
 ]

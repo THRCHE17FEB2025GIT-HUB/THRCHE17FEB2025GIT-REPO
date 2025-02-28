@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 import { Router } from "@angular/router";
 
-interface LoginForm {
+interface LoginData {
   loginid: string;
   password: string;
 }
@@ -58,7 +58,7 @@ export class LoginComponent {
 
 
 
-    const formData:LoginForm = this.loginForm.value;
+    const formData:LoginData = this.loginForm.value;
 
     if (formData.loginid === "angular" && formData.password === "ngpass") {
       console.log("Login successful");
