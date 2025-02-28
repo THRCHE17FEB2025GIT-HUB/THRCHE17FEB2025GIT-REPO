@@ -7,9 +7,9 @@ import { UpdateEmpComponent } from './update-emp/update-emp.component';
 import { RegisterComponent } from './register/register.component';
 import { AppComponent } from './app.component';
 import { UseStandaloneComponentInModuleComponent } from './use-standalone-component-in-module/use-standalone-component-in-module.component';
+// import routes from './app.routes';
 
 
-// The Routes type is an array of Route objects. Each Route object has a path property that defines the URL path for the route, and a component property that defines the component to display when the route is activated.
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path: 'employees', component: ListEmpComponent},
@@ -17,6 +17,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: '**', component:LoginComponent}
 ]
+
 
 @NgModule({
   declarations: [],
