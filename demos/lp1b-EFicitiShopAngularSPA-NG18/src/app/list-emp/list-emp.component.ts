@@ -12,7 +12,7 @@ import { Employee } from '../model/employee.model';
 })
 export class ListEmpComponent implements OnInit {
 
-  employees: Employee[]; // array of Employee objects
+  employees!: Employee[]; // array of Employee objects
   // employeeService: EmployeeService;
 
   constructor(private employeeService: EmployeeService, private router: Router) {

@@ -1,0 +1,5 @@
+.boldItalicError {
+  font-style: italic;
+  font-weight: bold;
+  color: red;
+}

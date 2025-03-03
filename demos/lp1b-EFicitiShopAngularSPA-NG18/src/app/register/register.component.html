@@ -1,1 +1,18 @@
-<p>register works!</p>
+<br>
+<h4>Register</h4>
+<div class="container">
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="adminName"> Admin Name</label>
+            <input type="text" formControlName="adminName" class="form-control w-50"
+                [ngClass]="{ 'is-invalid' : registerForm.controls['adminName'].errors, 'boldItalicError' : registerForm.controls['adminName'].errors}" />
+        </div>
+    </form>
+</div>
+
+
+<!-- {
+    'is-invalid' : registerForm.controls['adminName'].errors,
+    'boldItalicError' : registerForm.controls['adminName'].errors
+} -->
