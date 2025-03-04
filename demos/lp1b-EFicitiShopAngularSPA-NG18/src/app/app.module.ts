@@ -17,7 +17,7 @@ import { UseStandaloneComponentInModuleComponent } from "./use-standalone-compon
     imports: [BrowserModule,
         HttpClientModule,
         ReactiveFormsModule,
-        // FormsModule,
+        FormsModule,
         AppRoutingModule,
         // UseStandaloneComponentInModuleComponent
     ],

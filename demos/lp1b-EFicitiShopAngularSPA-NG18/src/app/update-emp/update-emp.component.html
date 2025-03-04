@@ -1,1 +1,48 @@
-<p>update-emp works!</p>
+
+<!-- Template driven forms -->
+<div class="container mt-3"> <!-- container for responsive padding, mt-3 adds margin-top of 3 units.
+-->
+<h4 class="text-center mb-4" [ngClass]="{'text-primary': !employee.id, 'text-danger': employee.id}">
+   <!-- text-center aligns text to center, mb-4 adds margin-bottom of 4 units -->
+   <!-- text-primary makes text blue, text-warning makes text yellow -->
+    <!-- The ? operator is used to check if employee.id is present or not. If present, text will be red, else blue.  -->
+
+   {{employee.id ? 'Update Employee Details' : 'Add New Employee'}}
+</h4>
+<hr class="mb-4"> <!-- mb-4 adds margin-bottom of 4 units to horizontal line -->
+</div>
+
+<form (ngSubmit)="updateEmployee()">
+    <div class="form-group" *ngIf="employee.id">
+        <!-- form-group provides proper spacing and alignment for form elements -->
+        <label for="id"> Id : </label>
+    
+        <input type="text" class="form-control col-md-6 w-50" name="id" [(ngModel)]="employee.id"
+            [disabled]="!!employee.id" required>
+            <!-- !! is used to convert the value to a boolean. If the value is truthy, it will be converted to false, and vice versa. -->
+        <!-- form-control styles the input field, col-md-6 makes it 6 columns wide on medium screens -->
+        <!-- w-50 sets width to 50% of parent container -->
+    </div>
+    <div class="form-group"><label for="name"> Name : </label>
+        <input type="text" class="form-control col-md-6 w-50" name="name" [(ngModel)]="employee.name">
+        <!-- form-control styles the input field, col-md-6 makes it 6 columns wide on medium screens -->
+        <!-- w-50 sets width to 50% of parent container -->
+    </div>
+    <div class="form-group"><label for="salary">Salary : </label>
+        <input type="text" class="form-control col-md-6 w-50" name="salary" [(ngModel)]="employee.salary">
+        <!-- form-control styles the input field, col-md-6 makes it 6 columns wide on medium screens -->
+        <!-- w-50 sets width to 50% of parent container -->
+    </div>
+    <br>
+    <!-- btn applies basic button styling -->
+    <button class="btn" [ngClass]="{'btn-success': !employee.id,
+     'btn-danger': employee.id, 'me-5': true}">
+        <!-- btn-success makes button green, btn-warning makes button yellow, me-5 adds margin-end of 5 units -->
+        {{employee.id ? 'Update' : 'Save'}}
+    </button>
+    <button type="reset" class="btn btn-info me-2">
+        <!-- btn-info makes button light blue, me-2 adds margin-end (right) -->
+        Clear
+    </button>
+    <br><br>
+</form>

@@ -24,12 +24,25 @@ export class ListEmpComponent implements OnInit {
     });
   }
 
-  updateEmployee(employeeId : number | undefined) {
-
+  updateEmployee(employeeId : number | undefined) : void {
+   if(employeeId !== undefined) {
+    this.router.navigate(['update', employeeId]);
+   }
+   else
+   {
+    console.log("Employee Id is undefined")
+   }
   }
- deleteEmployee(toDeleteEmployee : Employee) :void {
-    // this.employeeService.deleteEmployee().subscribe((data) => {
-    //   this.employees = this.employees.filter(emp => emp.id !== 1);
-    // });
+
+    // Purpose : To delete an employee
+  // Input : Employee object
+
+  deleteEmployee(toDeleteEmployee: Employee): void {
+    if (toDeleteEmployee.id !== undefined) {
+      // deleting the employee from the list
+      this.employeeService.deleteEmployee(toDeleteEmployee.id).subscribe((employee) => {
+        this.employees = this.employees.filter(employee => employee.id !== toDeleteEmployee.id);
+      })
+    }
   }
 }
